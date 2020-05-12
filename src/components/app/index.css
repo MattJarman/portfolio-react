@@ -1,0 +1,16 @@
+:root {
+    --background: #FDF7FA;
+}
+
+html, body {
+    font-family: 'Nunito', sans-serif;
+}
+
+html {
+    margin: 0;
+    background-color: var(--background);
+}
+
+body {
+    overflow-x: hidden;
+}
