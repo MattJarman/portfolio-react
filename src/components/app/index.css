@@ -1,16 +1,17 @@
 :root {
-    --background: #FDF7FA;
+  --background: #fdf7fa;
 }
 
-html, body {
-    font-family: 'Nunito', sans-serif;
+html,
+body {
+  font-family: "Nunito", sans-serif;
 }
 
 html {
-    margin: 0;
-    background-color: var(--background);
+  margin: 0;
+  background-color: var(--background);
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
