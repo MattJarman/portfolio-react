@@ -1,16 +1,19 @@
-import React, { Component } from "react";
-import AbsoluteWrapper from "../absolute-wrapper";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './index.css';
 
 class Projects extends Component {
   render() {
     return (
-      <AbsoluteWrapper>
-        <div className="mt-8 sm:mt-16">
-          <div className="flex flex-row container mx-auto">
-            <div className="flex-grow">
-              <p className="text-xl sm:text-6xl">About Me</p>
+      <div className="">
+        <div className="flex flex-col px-4 pt-8 h-view-nav">
+          <div className="flex flex-col flex-grow">
+            <img
+              class="rounded-full self-center w-32 h-32 my-4 shadow-md sm:w-84 sm:h-84 mx-8 sm:mx-16"
+              src={`${process.env.PUBLIC_URL}/img/me.jpg`}
+            />
+            <div className="text-center">
+              <p className="text-4xl sm:text-6xl">About Me</p>
               <p className="text-xl sm:text-4xl text-gray-500">
                 I'm a skeep-beep de bop-bop beep bop bo-dope
               </p>
@@ -18,20 +21,38 @@ class Projects extends Component {
                 And I love the bop
               </p>
             </div>
-            <img
-              class="rounded-full self-center float-left w-24 h-24 sm:w-84 sm:h-84 mx-8 sm:mx-16 shadow-md"
-              src={`${process.env.PUBLIC_URL}/img/me.jpg`}
-            />
           </div>
-          <div className="w-full flex justify-center">
-            <FontAwesomeIcon
-              className="outline-none"
-              icon={["fab", "js"]}
-              size="10x"
-            />
+          <div className="flex justify-center sticky bottom-0">
+            <a href="#experience" className="focus:outline-none">
+              <FontAwesomeIcon
+                className="outline-none text-paradise-pink-500"
+                icon="angle-down"
+                size="4x"
+              />
+            </a>
           </div>
         </div>
-      </AbsoluteWrapper>
+        <div
+          id="experience"
+          className="w-full h-screen flex flex-col px-4 bg-cultured-gray border-t-2 border-gray-200"
+        >
+          <p className="text-4xl text-center my-8">Experience</p>
+          <div className="flex flex-row">
+            <div className="fa-layers fa-fw w-32 h-32">
+              <FontAwesomeIcon
+                className="outline-none text-black"
+                icon="square"
+                size="8x"
+              />
+              <FontAwesomeIcon
+                className="outline-none text-javascript"
+                icon={['fab', 'js']}
+                size="8x"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }

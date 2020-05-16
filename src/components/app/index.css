@@ -2,9 +2,13 @@
   --background: #fdf7fa;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 html {

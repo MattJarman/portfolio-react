@@ -1,5 +1,5 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Footer() {
   return (
@@ -9,7 +9,7 @@ function Footer() {
           {/* Dark mode toggle */}
           <button className="mr-2 outline-none">
             <FontAwesomeIcon
-              className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-yellow-500 outline-none"
+              className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-yellow-500 outline-none focus:outline-none"
               icon="lightbulb"
               size="2x"
             />
@@ -22,8 +22,8 @@ function Footer() {
             href="https://www.linkedin.com/in/matthew-jarman-231114193/"
           >
             <FontAwesomeIcon
-              className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-linkedin outline-none"
-              icon={["fab", "linkedin"]}
+              className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-linkedin outline-none focus:outline-none"
+              icon={['fab', 'linkedin']}
               size="2x"
             />
           </a>
@@ -33,8 +33,8 @@ function Footer() {
             href="https://github.com/MattJarman/"
           >
             <FontAwesomeIcon
-              className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-github outline-none"
-              icon={["fab", "github"]}
+              className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-github outline-none focus:outline-none"
+              icon={['fab', 'github']}
               size="2x"
             />
           </a>

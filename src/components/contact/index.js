@@ -1,40 +1,45 @@
-import React, { Component } from "react";
-import AbsoluteWrapper from "../absolute-wrapper";
+import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import './index.css';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '',
+      copied: false,
+      hidden: true,
+    };
+  }
+
   render() {
     return (
-      <AbsoluteWrapper>
-        <div>
-          <p className="text-6xl pb-8">Contact</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-            ratione magnam. Id recusandae, hic quasi at laborum eum voluptate
-            deserunt dolorem numquam, ratione dolor inventore eius, labore culpa
-            quod rerum adipisci harum iure sunt quia! Minus quibusdam illo
-            incidunt libero iusto debitis perspiciatis aperiam laboriosam
-            possimus dolorum expedita similique accusamus impedit magnam,
-            numquam nisi doloremque animi et. Sint praesentium sapiente
-            voluptatem vel ab sit velit commodi sunt veritatis, expedita facilis
-            architecto a voluptates. Totam amet veritatis fuga voluptas?
-            Inventore esse voluptatem ducimus tempore saepe eos dolore vero
-            error. Accusamus magni fuga beatae! Architecto necessitatibus
-            veritatis repudiandae unde, cupiditate quo aliquam similique quaerat
-            ab! Dolorum quis ea saepe maiores exercitationem fugiat repellat
-            repellendus excepturi voluptate labore! Delectus, unde. Facere
-            veritatis, quis expedita debitis nostrum nemo inventore fuga nobis
-            repellat porro iure ducimus ea exercitationem perspiciatis hic
-            impedit laborum, voluptatum iste explicabo assumenda. Nesciunt
-            ratione alias recusandae doloribus vitae saepe veniam? Nam, placeat
-            voluptatum doloremque iusto ullam unde tempore qui quis laudantium
-            nihil aperiam necessitatibus asperiores excepturi! Quo quae
-            dignissimos quisquam deserunt cumque maxime ea labore assumenda
-            eligendi neque veniam iusto iste non autem atque saepe optio
-            voluptas, rerum nisi tempora doloremque? Atque cum, laborum
-            consequatur harum aspernatur quas vitae rem accusamus!
-          </p>
+      <div>
+        <div className="px-8 pt-4 text-center">
+          <p className="text-6xl">Contact</p>
+          <div className="flex flex-col mt-8">
+            <div className="flex flex-row items-center justify-center">
+              <FontAwesomeIcon className="mr-4" icon="envelope" size="2x" />
+              <p className="text-lg pr-2 text-gray-700">
+                mattjarman22@outlook.com
+              </p>
+              <CopyToClipboard
+                onCopy={() => this.setState({ copied: true })}
+                text="mattjarman22@outlook.com"
+              >
+                <button className="relative outline-none focus:outline-none">
+                  <FontAwesomeIcon
+                    className="text-blue"
+                    icon={['far', 'clone']}
+                    size="1x"
+                  />
+                </button>
+              </CopyToClipboard>
+            </div>
+          </div>
         </div>
-      </AbsoluteWrapper>
+      </div>
     );
   }
 }
