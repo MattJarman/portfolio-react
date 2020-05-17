@@ -1,7 +1,12 @@
+:root {
+  --icon-shadow: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.1));
+}
+
 .h-view-nav {
   height: calc(100vh - 46px);
 }
 
-.javascript {
-  background: black;
+.skill-icon {
+  -webkit-filter: var(--icon-shadow);
+  filter: var(--icon-shadow);
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Progress from '../progress';
 import './index.css';
 
 class Projects extends Component {
@@ -9,7 +10,7 @@ class Projects extends Component {
         <div className="flex flex-col px-4 pt-8 h-view-nav">
           <div className="flex flex-col flex-grow">
             <img
-              class="rounded-full self-center w-32 h-32 my-4 shadow-md sm:w-84 sm:h-84 mx-8 sm:mx-16"
+              className="rounded-full self-center w-32 h-32 my-4 shadow-md sm:w-72 sm:h-72 mx-8 sm:mx-16"
               src={`${process.env.PUBLIC_URL}/img/me.jpg`}
             />
             <div className="text-center">
@@ -23,7 +24,7 @@ class Projects extends Component {
             </div>
           </div>
           <div className="flex justify-center sticky bottom-0">
-            <a href="#experience" className="focus:outline-none">
+            <a href="#skills" className="focus:outline-none">
               <FontAwesomeIcon
                 className="outline-none text-paradise-pink-500"
                 icon="angle-down"
@@ -33,22 +34,40 @@ class Projects extends Component {
           </div>
         </div>
         <div
-          id="experience"
-          className="w-full h-screen flex flex-col px-4 bg-cultured-gray border-t-2 border-gray-200"
+          id="skills"
+          className="w-full h-screen px-8 bg-cultured-gray border-t-2 border-gray-200"
         >
-          <p className="text-4xl text-center my-8">Experience</p>
-          <div className="flex flex-row">
-            <div className="fa-layers fa-fw w-32 h-32">
-              <FontAwesomeIcon
-                className="outline-none text-black"
-                icon="square"
-                size="8x"
-              />
-              <FontAwesomeIcon
-                className="outline-none text-javascript"
-                icon={['fab', 'js']}
-                size="8x"
-              />
+          <div className="container mx-auto">
+            <p className="text-4xl mt-8 mb-8 font-bold border-b-2 sm:mb-40">
+              SKILLS
+            </p>
+            <div className="flex flex-col sm:flex-row">
+              <div className="flex flex-col w-full mb-8 sm:w-1/2 sm:mb-0 sm:mr-8">
+                <Progress text="JavaScript" width="90%" />
+                <Progress text="NodeJS" width="85%" />
+                <Progress text="PHP" width="75%" />
+                <Progress text="MySQL" width="70%" />
+                <Progress text="Laravel" width="65%" />
+                <Progress text="MongoDB" width="60%" />
+                <Progress text="React" width="40%" />
+                <Progress text="Java" width="40%" />
+              </div>
+              <div className="flex flex-row sm:w-1/2">
+                <div className="flex flex-grow sm:flex-grow-0 sm:w-1/2 sm:justify-center">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/icons/solid-alternative.svg`}
+                    alt="S.O.L.I.D"
+                    className="skill-icon w-32"
+                  />
+                </div>
+                <div className="flex sm:w-1/2 sm:justify-center">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/icons/tdd.svg`}
+                    alt="TDD"
+                    className="skill-icon w-32"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

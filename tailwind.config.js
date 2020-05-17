@@ -6,6 +6,7 @@ module.exports = {
         'paradise-pink': {
           '100': '#FDBED7',
           '500': '#ED4D6E',
+          '600': '#BB364D',
         },
         'cultured-gray': '#F7F7F7',
         linkedin: '#2867B2',
