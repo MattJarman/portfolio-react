@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { Route, __RouterContext } from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import React, { useContext } from "react";
+import { Route, __RouterContext } from "react-router-dom";
+import { AnimatedSwitch } from "react-router-transition";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
   faBars,
   faLightbulb,
@@ -10,16 +10,16 @@ import {
   faAngleDown,
   faCaretLeft,
   faEnvelope,
-} from '@fortawesome/free-solid-svg-icons';
-import { faClone as farClone } from '@fortawesome/free-regular-svg-icons';
-import { slideLeft, slideRight } from './slide-animation';
-import Portfolio from '../portfolio';
-import Contact from '../contact';
-import About from '../about';
-import Navbar from '../navbar';
-import Footer from '../footer';
-import './index.css';
-import '../../tailwind.css';
+} from "@fortawesome/free-solid-svg-icons";
+import { faClone as farClone } from "@fortawesome/free-regular-svg-icons";
+import { slideLeft, slideRight } from "./slide-animation";
+import Portfolio from "../portfolio";
+import Contact from "../contact";
+import About from "../about";
+import Navbar from "../navbar";
+import Footer from "../footer";
+import "./index.css";
+import "../../tailwind.css";
 
 library.add(
   fab,
@@ -42,8 +42,8 @@ function App() {
   if (prevState !== undefined) {
     let prevPath = prevState.prevPath;
     if (
-      (prevPath === '/projects' && location.pathname === '/') ||
-      prevPath === '/about'
+      (prevPath === "/portfolio" && location.pathname === "/") ||
+      prevPath === "/contact"
     ) {
       slide = slideLeft;
     }
@@ -55,9 +55,9 @@ function App() {
         <Navbar />
         <main className="flex-grow">
           <AnimatedSwitch {...slide}>
-            <Route exact path="/" component={Portfolio} />
-            <Route exact path="/projects" component={About} />
-            <Route exact path="/about" component={Contact} />
+            <Route exact path="/" component={About} />
+            <Route exact path="/portfolio" component={Portfolio} />
+            <Route exact path="/contact" component={Contact} />
           </AnimatedSwitch>
         </main>
         {/* <Footer /> */}

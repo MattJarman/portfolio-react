@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Progress from '../progress';
-import './index.css';
+import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Progress from "../progress";
+import "./index.css";
 
 class Projects extends Component {
   render() {
@@ -35,14 +35,14 @@ class Projects extends Component {
         </div>
         <div
           id="skills"
-          className="w-full h-screen px-8 bg-cultured-gray border-t-2 border-gray-200"
+          className="flex flex-col w-full h-screen px-8 bg-cultured-gray border-t-2 border-gray-200"
         >
-          <div className="container mx-auto">
+          <div className="flex flex-col flex-grow container mx-auto">
             <p className="text-4xl mt-8 mb-8 font-bold border-b-2 sm:mb-40">
               SKILLS
             </p>
             <div className="flex flex-col sm:flex-row">
-              <div className="flex flex-col w-full mb-8 sm:w-1/2 sm:mb-0 sm:mr-8">
+              <div className="flex flex-col w-full mb-16 sm:w-1/2 sm:mb-0 sm:mr-8">
                 <Progress text="JavaScript" width="90%" />
                 <Progress text="NodeJS" width="85%" />
                 <Progress text="PHP" width="75%" />
@@ -69,6 +69,15 @@ class Projects extends Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex justify-center">
+            <a href="#interests" className="focus:outline-none">
+              <FontAwesomeIcon
+                className="outline-none text-paradise-pink-500"
+                icon="angle-down"
+                size="4x"
+              />
+            </a>
           </div>
         </div>
       </div>
