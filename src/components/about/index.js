@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Progress from "../progress";
 import "./index.css";
@@ -6,8 +7,35 @@ import "./index.css";
 class Projects extends Component {
   render() {
     return (
-      <div className="">
-        <div className="flex flex-col px-4 pt-8 h-view-nav">
+      <div>
+        <div id="header" className="flex flex-col  px-4 pt-8 h-view-nav">
+          <div className="flex flex-grow flex-col h-full items-center justify-center">
+            <p className="text-4xl mb-8">Hey</p>
+            <NavLink
+              activeClassName="lg:border-b-2 active"
+              className="bg-paradise-pink-500 hover:bg-paradise-pink-600 text-white font-bold py-2 px-4 shadow-md"
+              to={{
+                pathname: "/portfolio",
+                state: { prevPath: "/" },
+              }}
+            >
+              Portfolio
+            </NavLink>
+          </div>
+          <div className="flex justify-center">
+            <a href="#me" className="focus:outline-none">
+              <FontAwesomeIcon
+                className="outline-none text-paradise-pink-500"
+                icon="angle-down"
+                size="4x"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          id="me"
+          className="flex flex-col px-4 pt-8 h-screen bg-cultured-gray border-t-2 border-b-2 border-gray-200"
+        >
           <div className="flex flex-col flex-grow">
             <img
               className="rounded-full self-center w-32 h-32 my-4 shadow-md sm:w-72 sm:h-72 mx-8 sm:mx-16"
@@ -23,7 +51,7 @@ class Projects extends Component {
               </p>
             </div>
           </div>
-          <div className="flex justify-center sticky bottom-0">
+          <div className="flex justify-center">
             <a href="#skills" className="focus:outline-none">
               <FontAwesomeIcon
                 className="outline-none text-paradise-pink-500"
@@ -33,15 +61,12 @@ class Projects extends Component {
             </a>
           </div>
         </div>
-        <div
-          id="skills"
-          className="flex flex-col w-full h-screen px-8 bg-cultured-gray border-t-2 border-gray-200"
-        >
+        <div id="skills" className="flex flex-col w-full h-screen px-8">
           <div className="flex flex-col flex-grow container mx-auto">
             <p className="text-4xl mt-4 mb-4 font-bold border-b-2 sm:mb-40">
               SKILLS
             </p>
-            <div className="flex flex-col h-full sm:flex-row">
+            <div className="flex flex-col sm:flex-row">
               <div className="flex flex-col w-full mb-8 sm:w-1/2 sm:mb-0 sm:mr-8">
                 <Progress text="JavaScript" width="90%" />
                 <Progress text="NodeJS" width="85%" />
