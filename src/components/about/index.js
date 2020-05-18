@@ -38,11 +38,11 @@ class Projects extends Component {
           className="flex flex-col w-full h-screen px-8 bg-cultured-gray border-t-2 border-gray-200"
         >
           <div className="flex flex-col flex-grow container mx-auto">
-            <p className="text-4xl mt-8 mb-8 font-bold border-b-2 sm:mb-40">
+            <p className="text-4xl mt-4 mb-4 font-bold border-b-2 sm:mb-40">
               SKILLS
             </p>
-            <div className="flex flex-col sm:flex-row">
-              <div className="flex flex-col w-full mb-16 sm:w-1/2 sm:mb-0 sm:mr-8">
+            <div className="flex flex-col h-full sm:flex-row">
+              <div className="flex flex-col w-full mb-8 sm:w-1/2 sm:mb-0 sm:mr-8">
                 <Progress text="JavaScript" width="90%" />
                 <Progress text="NodeJS" width="85%" />
                 <Progress text="PHP" width="75%" />
@@ -52,19 +52,26 @@ class Projects extends Component {
                 <Progress text="React" width="40%" />
                 <Progress text="Java" width="40%" />
               </div>
-              <div className="flex flex-row sm:w-1/2">
-                <div className="flex flex-grow sm:flex-grow-0 sm:w-1/2 sm:justify-center">
+              <div className="flex flex-row flex-wrap sm:w-1/2">
+                <div className="flex w-1/2 mb-2 justify-center">
                   <img
                     src={`${process.env.PUBLIC_URL}/icons/solid-alternative.svg`}
                     alt="S.O.L.I.D"
-                    className="skill-icon w-32"
+                    className="skill-icon w-24"
                   />
                 </div>
-                <div className="flex sm:w-1/2 sm:justify-center">
+                <div className="flex w-1/2 mb-2 justify-center">
                   <img
                     src={`${process.env.PUBLIC_URL}/icons/tdd.svg`}
-                    alt="TDD"
-                    className="skill-icon w-32"
+                    alt="Test Driven Development"
+                    className="skill-icon w-24"
+                  />
+                </div>
+                <div className="flex w-full justify-center">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/icons/agile.svg`}
+                    alt="Agile"
+                    className="skill-icon w-24"
                   />
                 </div>
               </div>
