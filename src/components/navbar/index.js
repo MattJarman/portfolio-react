@@ -19,7 +19,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap p-2 bg-paradise-pink-500 shadow-md sticky top-0 z-10">
+      <nav className="flex items-center justify-between flex-wrap p-2 bg-paradise-pink-500 shadow-md z-10">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="font-semibold text-xl tracking-tight">
             Matthew Jarman
