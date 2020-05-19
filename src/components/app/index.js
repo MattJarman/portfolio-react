@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Route, __RouterContext } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -36,6 +36,7 @@ function App() {
   const context = useContext(__RouterContext);
   const { location } = context;
   const prevState = context.history.location.state;
+  const [vh, setVh] = useState(0);
 
   let slide = slideRight;
 
@@ -47,6 +48,22 @@ function App() {
     ) {
       slide = slideLeft;
     }
+  }
+
+  useEffect(() => {
+    document.title = "Matthew Jarman";
+    updateVh();
+    window.addEventListener("resize", updateVh);
+
+    return () => {
+      window.removeEventListener("resize", updateVh);
+    };
+  }, []);
+
+  function updateVh() {
+    const vh = window.innerHeight * 0.01;
+    setVh(vh);
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
 
   return (
