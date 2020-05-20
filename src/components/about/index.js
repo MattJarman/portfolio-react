@@ -73,7 +73,7 @@ class Projects extends Component {
               </div>
             </div>
             <div className="flex justify-center">
-              <AnchorLink href="#skills" className="focus:outline-none">
+              <AnchorLink href="#experience" className="focus:outline-none">
                 <FontAwesomeIcon
                   className="outline-none text-paradise-pink-500"
                   icon="angle-down"
@@ -83,10 +83,13 @@ class Projects extends Component {
             </div>
           </div>
         </div>
-        <div id="skills" className="flex flex-col w-full h-mobile-screen px-8">
+        <div
+          id="experience"
+          className="flex flex-col w-full h-mobile-screen px-4"
+        >
           <div className="flex flex-col container mx-auto">
-            <p className="text-4xl text-right mt-4 mb-8 font-bold border-b-2 md:mb-40">
-              SKILLS
+            <p className="text-4xl mt-4 mb-8 font-bold border-b-2 md:mb-40">
+              EXPERIENCE
             </p>
             <div className="flex flex-col h-full sm:flex-row">
               <div className="flex flex-col w-full mb-8 sm:w-1/2 sm:mb-0 sm:mr-8">

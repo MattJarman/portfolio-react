@@ -19,6 +19,14 @@ module.exports = {
         "96": "24rem",
       },
     },
+    minHeight: {
+      "2": "0.5rem",
+      "4": "1rem",
+      "8": "2rem",
+      "16": "4rem",
+      "32": "8rem",
+      "64": "16rem",
+    },
   },
   variants: {
     textColor: ["responsive", "hover", "focus", "active"],

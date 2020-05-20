@@ -8132,16 +8132,28 @@ video {
   max-width: 1280px;
 }
 
-.min-h-0{
-  min-height: 0;
+.min-h-2{
+  min-height: 0.5rem;
 }
 
-.min-h-full{
-  min-height: 100%;
+.min-h-4{
+  min-height: 1rem;
 }
 
-.min-h-screen{
-  min-height: 100vh;
+.min-h-8{
+  min-height: 2rem;
+}
+
+.min-h-16{
+  min-height: 4rem;
+}
+
+.min-h-32{
+  min-height: 8rem;
+}
+
+.min-h-64{
+  min-height: 16rem;
 }
 
 .min-w-0{
@@ -23591,16 +23603,28 @@ video {
     max-width: 1280px;
   }
 
-  .sm\:min-h-0{
-    min-height: 0;
+  .sm\:min-h-2{
+    min-height: 0.5rem;
   }
 
-  .sm\:min-h-full{
-    min-height: 100%;
+  .sm\:min-h-4{
+    min-height: 1rem;
   }
 
-  .sm\:min-h-screen{
-    min-height: 100vh;
+  .sm\:min-h-8{
+    min-height: 2rem;
+  }
+
+  .sm\:min-h-16{
+    min-height: 4rem;
+  }
+
+  .sm\:min-h-32{
+    min-height: 8rem;
+  }
+
+  .sm\:min-h-64{
+    min-height: 16rem;
   }
 
   .sm\:min-w-0{
@@ -39051,16 +39075,28 @@ video {
     max-width: 1280px;
   }
 
-  .md\:min-h-0{
-    min-height: 0;
+  .md\:min-h-2{
+    min-height: 0.5rem;
   }
 
-  .md\:min-h-full{
-    min-height: 100%;
+  .md\:min-h-4{
+    min-height: 1rem;
   }
 
-  .md\:min-h-screen{
-    min-height: 100vh;
+  .md\:min-h-8{
+    min-height: 2rem;
+  }
+
+  .md\:min-h-16{
+    min-height: 4rem;
+  }
+
+  .md\:min-h-32{
+    min-height: 8rem;
+  }
+
+  .md\:min-h-64{
+    min-height: 16rem;
   }
 
   .md\:min-w-0{
@@ -54511,16 +54547,28 @@ video {
     max-width: 1280px;
   }
 
-  .lg\:min-h-0{
-    min-height: 0;
+  .lg\:min-h-2{
+    min-height: 0.5rem;
   }
 
-  .lg\:min-h-full{
-    min-height: 100%;
+  .lg\:min-h-4{
+    min-height: 1rem;
   }
 
-  .lg\:min-h-screen{
-    min-height: 100vh;
+  .lg\:min-h-8{
+    min-height: 2rem;
+  }
+
+  .lg\:min-h-16{
+    min-height: 4rem;
+  }
+
+  .lg\:min-h-32{
+    min-height: 8rem;
+  }
+
+  .lg\:min-h-64{
+    min-height: 16rem;
   }
 
   .lg\:min-w-0{
@@ -69971,16 +70019,28 @@ video {
     max-width: 1280px;
   }
 
-  .xl\:min-h-0{
-    min-height: 0;
+  .xl\:min-h-2{
+    min-height: 0.5rem;
   }
 
-  .xl\:min-h-full{
-    min-height: 100%;
+  .xl\:min-h-4{
+    min-height: 1rem;
   }
 
-  .xl\:min-h-screen{
-    min-height: 100vh;
+  .xl\:min-h-8{
+    min-height: 2rem;
+  }
+
+  .xl\:min-h-16{
+    min-height: 4rem;
+  }
+
+  .xl\:min-h-32{
+    min-height: 8rem;
+  }
+
+  .xl\:min-h-64{
+    min-height: 16rem;
   }
 
   .xl\:min-w-0{
