@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Progress from "../progress";
-import "./index.css";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Progress from '../progress';
+import './index.css';
 
 class Projects extends Component {
   render() {
@@ -22,8 +22,8 @@ class Projects extends Component {
               activeClassName="lg:border-b-2 active"
               className="bg-paradise-pink-500 w-24 text-center hover:bg-paradise-pink-600 text-white font-bold py-2 px-4 shadow-md"
               to={{
-                pathname: "/portfolio",
-                state: { prevPath: "/" },
+                pathname: '/portfolio',
+                state: { prevPath: '/' },
               }}
             >
               Portfolio

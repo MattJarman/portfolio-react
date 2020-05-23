@@ -20,6 +20,7 @@ function Footer() {
             className="mr-2 cursor-pointer outline-none"
             target="_blank"
             href="https://www.linkedin.com/in/matthew-jarman-231114193/"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon
               className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-linkedin outline-none focus:outline-none"
@@ -31,6 +32,7 @@ function Footer() {
             className="mr-2 cursor-pointer outline-none"
             target="_blank"
             href="https://github.com/MattJarman/"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon
               className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-github outline-none focus:outline-none"
