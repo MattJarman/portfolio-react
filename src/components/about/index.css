@@ -6,3 +6,12 @@
   -webkit-filter: var(--icon-shadow);
   filter: var(--icon-shadow);
 }
+
+.heading::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin-left: 1rem;
+  background-color: #a0aec0;
+}
