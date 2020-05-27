@@ -10,8 +10,15 @@ import {
   faAngleDown,
   faCaretLeft,
   faEnvelope,
+  faCircle,
+  faStar,
+  faDatabase,
 } from '@fortawesome/free-solid-svg-icons';
-import { faClone as farClone } from '@fortawesome/free-regular-svg-icons';
+import {
+  faClone as farClone,
+  faCircle as farCircle,
+  faStar as farStar,
+} from '@fortawesome/free-regular-svg-icons';
 import { slideLeft, slideRight } from './slide-animation';
 import Portfolio from '../portfolio';
 import Contact from '../contact';
@@ -29,7 +36,12 @@ library.add(
   faAngleDown,
   farClone,
   faCaretLeft,
-  faEnvelope
+  faEnvelope,
+  faCircle,
+  farCircle,
+  faStar,
+  farStar,
+  faDatabase
 );
 
 function App() {
@@ -67,7 +79,7 @@ function App() {
 
   return (
     <>
-      <div className="h-screen flex flex-col">
+      <div className="flex flex-col h-screen">
         <Navbar />
         <main className="flex-grow">
           <AnimatedSwitch {...slide}>

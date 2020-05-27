@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Progress from '../progress';
+import Skill from '../skill';
+import skills from './skills';
 import './index.css';
 
-class Projects extends Component {
+class About extends Component {
   render() {
     return (
       <div>
@@ -13,7 +14,7 @@ class Projects extends Component {
           id="header"
           className="flex flex-col px-4 pt-32 h-mobile-screen-nav sm:pt-64"
         >
-          <div className="container flex flex-col flex-grow h-full mx-auto">
+          <div className="container flex flex-col flex-grow h-full mx-auto mb-16">
             <p className="text-4xl font-bold sm:text-6xl">Matthew Jarman</p>
             <p className="mb-4 text-2xl font-bold text-gray-500 sm:text-4xl">
               Software Developer
@@ -83,7 +84,7 @@ class Projects extends Component {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-center w-full h-full lg:w-1/3 lg:ml-24">
+                <div className="flex items-center justify-center flex-grow w-full lg:w-1/3 lg:ml-24">
                   <img
                     className="w-1/2 h-auto mx-8 my-4 mb-8 rounded-full shadow-md sm:mx-16 md:w-72 md:h-72 lg:mb-0"
                     src={`${process.env.PUBLIC_URL}/img/me.jpg`}
@@ -107,10 +108,21 @@ class Projects extends Component {
           className="flex flex-col px-4 border-t-2 border-b-2 border-gray-200 h-mobile-screen bg-cultured-gray"
         >
           <div className="container flex flex-col flex-grow mx-auto">
-            <div className="flex flex-col flex-grow">
+            <div className="flex flex-col">
               <p className="flex items-center mt-4 mb-8 text-2xl font-bold whitespace-no-wrap heading md:text-3xl">
                 Skills
               </p>
+            </div>
+            <div className="flex flex-row flex-wrap justify-between">
+              {skills.sort(compare).map((skill) => {
+                return (
+                  <Skill
+                    name={skill.name}
+                    icon={skill.icon}
+                    level={skill.level}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
@@ -119,4 +131,14 @@ class Projects extends Component {
   }
 }
 
-export default Projects;
+function compare(a, b) {
+  if (a.level > b.level) {
+    return -1;
+  }
+  if (a.level < b.level) {
+    return 1;
+  }
+  return 0;
+}
+
+export default About;

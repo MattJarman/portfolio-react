@@ -4,7 +4,7 @@
 
 html,
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 html {
@@ -17,11 +17,9 @@ body {
 }
 
 .h-mobile-screen {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .h-mobile-screen-nav {
-  height: 100vh;
-  height: calc((var(--vh, 1vh) * 100) - 46px);
+  min-height: calc((var(--vh, 1vh) * 100) - 46px);
 }
