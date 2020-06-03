@@ -21,18 +21,18 @@ const skills = [
   },
   {
     name: 'Python',
-    level: 2,
+    level: 1,
     icon: ['fab', 'python'],
   },
   {
     name: 'MySQL',
     level: 3,
-    icon: 'database',
+    icon: 'sql',
   },
   {
     name: 'MongoDB',
-    level: 3,
-    icon: 'database',
+    level: 2.5,
+    icon: 'mongodb',
   },
   {
     name: 'git',
@@ -41,8 +41,23 @@ const skills = [
   },
   {
     name: 'Laravel',
-    level: 3.5,
+    level: 3,
     icon: ['fab', 'laravel'],
+  },
+  {
+    name: 'CSS',
+    level: 2.5,
+    icon: ['fab', 'css3-alt'],
+  },
+  {
+    name: 'HTML',
+    level: 2.5,
+    icon: ['fab', 'html5'],
+  },
+  {
+    name: 'Docker',
+    level: 3,
+    icon: ['fab', 'docker'],
   },
 ];
 

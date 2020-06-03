@@ -26,15 +26,15 @@ class Skill extends Component {
 
   render() {
     return (
-      <div className="flex flex-col items-center justify-center w-24 mx-auto">
+      <div className="flex flex-col items-center justify-center w-24 mx-auto md:w-56">
         <FontAwesomeIcon
-          className="mb-2 text-4xl text-black outline-none"
+          className="mb-4 text-4xl transition duration-300 ease-in-out transform outline-none cursor-pointer focus:outline-none md:text-6xl"
           icon={this.props.icon}
         />
         <p className="text-sm font-bold">{this.props.name}</p>
         <p className="text-xs italic text-gray-700">{this.proficieny}</p>
         <Rating
-          className="mb-8 text-xs text-paradise-pink-500"
+          className="mb-8 text-xs text-paradise-pink-500 md:text-base"
           initialRating={this.props.level}
           readonly
           start="0"

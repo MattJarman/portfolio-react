@@ -11,7 +11,6 @@ module.exports = {
         'cultured-gray': '#F7F7F7',
         linkedin: '#2867B2',
         github: '#181A1B',
-        javascript: '#F7DF1E',
       },
       spacing: {
         '72': '18rem',

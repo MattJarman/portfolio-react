@@ -46,8 +46,8 @@ class About extends Component {
         >
           <div className="container flex flex-col flex-grow mx-auto md:px-8">
             <div className="flex flex-col flex-grow">
-              <div className="flex flex-col items-center flex-grow lg:flex-row lg:mx-32">
-                <div className="lg:w-2/3">
+              <div className="flex flex-col items-center flex-grow lg:flex-row">
+                <div>
                   <p className="flex items-center mt-4 mb-8 text-2xl font-bold whitespace-no-wrap heading md:text-3xl">
                     About Me
                   </p>
@@ -70,21 +70,12 @@ class About extends Component {
                       >
                         Bangor University
                       </a>
-                      , I joined the Technology team at{' '}
-                      <a
-                        className="text-blue-700 no-underline hover:underline"
-                        href=" https://www.sykescottages.co.uk/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Sykes Cottages
-                      </a>{' '}
-                      to work on developing and maintaining APIs for our
-                      partners.
+                      , I began my current job as a Graduate Developer working
+                      on developing and maintaining APIs for our partners.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-center flex-grow w-full lg:w-1/3 lg:ml-24">
+                <div className="flex items-center justify-center flex-grow w-full lg:ml-24">
                   <img
                     className="w-1/2 h-auto mx-8 my-4 mb-8 rounded-full shadow-md sm:mx-16 md:w-72 md:h-72 lg:mb-0"
                     src={`${process.env.PUBLIC_URL}/img/me.jpg`}
@@ -113,16 +104,19 @@ class About extends Component {
                 Skills
               </p>
             </div>
-            <div className="flex flex-row flex-wrap justify-between">
-              {skills.sort(compare).map((skill) => {
-                return (
-                  <Skill
-                    name={skill.name}
-                    icon={skill.icon}
-                    level={skill.level}
-                  />
-                );
-              })}
+            <div className="flex flex-grow md:tems-center">
+              <div className="flex flex-row flex-wrap justify-between">
+                {skills.sort(compare).map((skill) => {
+                  return (
+                    <Skill
+                      name={skill.name}
+                      icon={skill.icon}
+                      iconStyle={skill.iconStyle}
+                      level={skill.level}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
