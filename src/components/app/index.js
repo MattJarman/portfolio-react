@@ -22,7 +22,6 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import { slideLeft, slideRight } from './slide-animation';
 import Portfolio from '../portfolio';
-import Contact from '../contact';
 import About from '../about';
 import Navbar from '../navbar';
 import Footer from '../footer';
