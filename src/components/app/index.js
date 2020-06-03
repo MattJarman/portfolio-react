@@ -3,6 +3,7 @@ import { Route, __RouterContext } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { sql, mongodb } from '../icons';
 import {
   faBars,
   faLightbulb,
@@ -10,8 +11,15 @@ import {
   faAngleDown,
   faCaretLeft,
   faEnvelope,
+  faCircle,
+  faStar,
+  faDatabase,
 } from '@fortawesome/free-solid-svg-icons';
-import { faClone as farClone } from '@fortawesome/free-regular-svg-icons';
+import {
+  faClone as farClone,
+  faCircle as farCircle,
+  faStar as farStar,
+} from '@fortawesome/free-regular-svg-icons';
 import { slideLeft, slideRight } from './slide-animation';
 import Portfolio from '../portfolio';
 import Contact from '../contact';
@@ -29,7 +37,14 @@ library.add(
   faAngleDown,
   farClone,
   faCaretLeft,
-  faEnvelope
+  faEnvelope,
+  faCircle,
+  farCircle,
+  faStar,
+  farStar,
+  faDatabase,
+  sql,
+  mongodb
 );
 
 function App() {
@@ -42,10 +57,7 @@ function App() {
 
   if (prevState !== undefined) {
     let prevPath = prevState.prevPath;
-    if (
-      (prevPath === '/portfolio' && location.pathname === '/') ||
-      prevPath === '/contact'
-    ) {
+    if (prevPath === '/portfolio') {
       slide = slideLeft;
     }
   }
@@ -67,13 +79,12 @@ function App() {
 
   return (
     <>
-      <div className="h-screen flex flex-col">
+      <div className="flex flex-col h-screen">
         <Navbar />
         <main className="flex-grow">
           <AnimatedSwitch {...slide}>
             <Route exact path="/" component={About} />
             <Route exact path="/portfolio" component={Portfolio} />
-            <Route exact path="/contact" component={Contact} />
           </AnimatedSwitch>
         </main>
         {/* <Footer /> */}

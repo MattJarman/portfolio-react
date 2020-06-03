@@ -38,7 +38,7 @@ class Project extends Component {
             <div class="font-bold text-2xl mb-2 sm:text-3xl ">
               {this.props.name}
             </div>
-            <div class="text-gray-700 text-xs sm:text-base">
+            <div class="text-gray-700 text-xs md:text-sm">
               <ReactMarkdown
                 source={this.props.text}
                 renderers={{ list: this.List, link: this.Link }}
@@ -50,7 +50,7 @@ class Project extends Component {
             <div className="tags w-2/3 space-y-4 flex-grow">
               {this.props.tags.map((tag) => {
                 return (
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 sm:text-sm">
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2">
                     {tag}
                   </span>
                 );
@@ -63,9 +63,8 @@ class Project extends Component {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
-                  className="transition duration-300 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:scale-110 hover:text-github outline-none focus:outline-none"
+                  className="text-xl transition duration-300 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:scale-110 hover:text-github outline-none focus:outline-none"
                   icon={['fab', 'github']}
-                  size="2x"
                 />
               </a>
             </div>
