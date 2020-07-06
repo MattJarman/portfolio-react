@@ -6,42 +6,27 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { sql, mongodb } from '../icons';
 import {
   faBars,
-  faLightbulb,
   faSquare,
   faAngleDown,
   faCaretLeft,
-  faEnvelope,
-  faCircle,
   faStar,
-  faDatabase,
 } from '@fortawesome/free-solid-svg-icons';
-import {
-  faClone as farClone,
-  faCircle as farCircle,
-  faStar as farStar,
-} from '@fortawesome/free-regular-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { slideLeft, slideRight } from './slide-animation';
 import Portfolio from '../portfolio';
 import About from '../about';
 import Navbar from '../navbar';
-import Footer from '../footer';
 import './index.css';
 import '../../tailwind.css';
 
 library.add(
   fab,
   faBars,
-  faLightbulb,
   faSquare,
   faAngleDown,
-  farClone,
   faCaretLeft,
-  faEnvelope,
-  faCircle,
-  farCircle,
   faStar,
   farStar,
-  faDatabase,
   sql,
   mongodb
 );
@@ -86,7 +71,6 @@ function App() {
             <Route exact path="/portfolio" component={Portfolio} />
           </AnimatedSwitch>
         </main>
-        {/* <Footer /> */}
       </div>
     </>
   );
