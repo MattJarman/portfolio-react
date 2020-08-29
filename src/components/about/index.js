@@ -96,7 +96,7 @@ class About extends Component {
         </div>
         <div
           id="skills"
-          className="flex flex-col px-4 border-b-2 border-gray-200 h-mobile-screen bg-cultured-gray"
+          className="flex flex-col px-4 border-b-2 border-gray-200 h-mobile-screen"
         >
           <div className="container flex flex-col flex-grow mx-auto">
             <div className="flex flex-col">
