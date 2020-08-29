@@ -16004,6 +16004,18 @@ video {
   height: 90%;
 }
 
+.full-colour {
+  filter: grayscale(0%);
+}
+
+.hover\:full-colour:hover {
+  filter: grayscale(0%);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
 @media (min-width: 640px){
   .sm\:space-y-0 > :not(template) ~ :not(template){
     --space-y-reverse: 0;

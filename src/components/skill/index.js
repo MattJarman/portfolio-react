@@ -27,10 +27,12 @@ class Skill extends Component {
   render() {
     return (
       <div className="flex flex-col items-center justify-center w-24 mx-auto md:w-56">
-        <FontAwesomeIcon
-          className="mb-4 text-4xl transition duration-300 ease-in-out transform outline-none cursor-pointer focus:outline-none md:text-6xl"
-          icon={this.props.icon}
-        />
+        <div className="flex items-center justify-center w-10 h-10 mb-4 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
+          <img
+            className="transition duration-300 ease-in-out transform outline-none cursor-pointer grayscale hover:full-colour focus:outline-none hover:-translate-y-1 hover:scale-105"
+            src={`${process.env.PUBLIC_URL}/icons/${this.props.icon}`}
+          ></img>
+        </div>
         <p className="text-sm font-bold">{this.props.name}</p>
         <p className="text-xs italic text-gray-700">{this.proficieny}</p>
         <Rating
