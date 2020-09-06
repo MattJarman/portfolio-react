@@ -31,6 +31,7 @@ class Skill extends Component {
           <img
             className="transition duration-300 ease-in-out transform outline-none cursor-pointer grayscale hover:full-colour focus:outline-none hover:-translate-y-1 hover:scale-105"
             src={`${process.env.PUBLIC_URL}/icons/${this.props.icon}`}
+            alt={this.props.name}
           ></img>
         </div>
         <p className="text-sm font-bold">{this.props.name}</p>

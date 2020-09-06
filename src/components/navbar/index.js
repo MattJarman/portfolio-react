@@ -20,11 +20,17 @@ function Navbar() {
   return (
     <>
       <nav className="z-10 flex flex-wrap items-center justify-between p-2 shadow-md bg-paradise-pink-500">
-        <div className="flex items-center flex-shrink-0 mr-6 text-white">
-          <span className="text-xl font-semibold tracking-tight">
-            Matthew Jarman
-          </span>
-        </div>
+        <NavLink
+          exact={true}
+          className="flex items-center flex-shrink-0 w-8 h-8 mr-6 text-white"
+          to={{ pathname: '/', state: { prevPath: location.pathname } }}
+        >
+          <img
+            className="cursor-pointer"
+            src={`${process.env.PUBLIC_URL}/icons/mj.svg`}
+            alt="MJ"
+          ></img>
+        </NavLink>
         <div className="block lg:hidden">
           <button
             className="flex items-center px-3 py-2 text-white rounded outline-none hover:text-white focus:outline-none"
@@ -39,7 +45,7 @@ function Navbar() {
             <NavLink
               exact={true}
               activeClassName="lg:border-b-2 active"
-              className="block mt-4 mr-6 outline-none sm:inline-block sm:mt-0 text-paradise-pink-100 active:text-white hover:text-white"
+              className="block mt-4 mr-4 outline-none sm:inline-block sm:mt-0 text-paradise-pink-100 active:text-white hover:text-white"
               onClick={hide}
               to={{ pathname: '/', state: { prevPath: location.pathname } }}
             >
@@ -47,7 +53,7 @@ function Navbar() {
             </NavLink>
             <NavLink
               activeClassName="lg:border-b-2 active"
-              className="block mt-4 mr-6 outline-none lg:inline-block lg:mt-0 text-paradise-pink-100 hover:text-white"
+              className="block mt-4 mr-2 outline-none lg:inline-block lg:mt-0 text-paradise-pink-100 hover:text-white"
               onClick={hide}
               to={{
                 pathname: '/portfolio',

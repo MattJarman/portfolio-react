@@ -34,7 +34,7 @@ library.add(
 function App() {
   const context = useContext(__RouterContext);
   const { location } = context;
-  const prevState = context.history.location.state;
+  const prevState = location.state;
   const [vh, setVh] = useState(0);
 
   let slide = slideRight;

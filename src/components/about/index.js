@@ -79,6 +79,7 @@ class About extends Component {
                   <img
                     className="w-1/2 h-auto mx-8 my-4 mb-8 rounded-full shadow-md sm:mx-16 md:w-72 md:h-72 lg:mb-0"
                     src={`${process.env.PUBLIC_URL}/img/me.jpg`}
+                    alt="Me"
                   />
                 </div>
               </div>
