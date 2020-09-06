@@ -63,7 +63,7 @@ function App() {
 
   return (
     <>
-      <div className="h-screen">
+      <div className="h-screen mt-0">
         <Navbar />
         <main className="flex-grow">
           <AnimatedSwitch {...slide}>
