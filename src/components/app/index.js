@@ -17,7 +17,7 @@ import Portfolio from '../portfolio';
 import About from '../about';
 import Navbar from '../navbar';
 import './index.css';
-import '../../tailwind.css';
+import '../../index.css';
 
 library.add(
   fab,
