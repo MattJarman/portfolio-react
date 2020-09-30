@@ -30,7 +30,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "watch:css": "postcss src/tailwind.css -o src/index.css",
-    "build:style": "postcss src/tailwind.css -o src/index.css",
+    "build:style": "NODE_ENV=production postcss src/tailwind.css -o src/index.css",
     "start": "npm run watch:css & react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
