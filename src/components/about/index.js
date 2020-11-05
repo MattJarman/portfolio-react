@@ -105,7 +105,7 @@ class About extends Component {
                 Skills
               </p>
             </div>
-            <div className="flex flex-grow md:tems-center">
+            <div className="flex flex-grow md:items-center">
               <div className="flex flex-row flex-wrap justify-between">
                 {skills.sort(compare).map((skill) => {
                   return (
